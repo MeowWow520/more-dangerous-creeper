@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "Layer0": "more-dangerous-creeper:item/meowwow520"
+  }
+}

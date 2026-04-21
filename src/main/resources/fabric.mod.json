@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "more-dangerous-creeper",
+	"version": "${version}",
+	"name": "More Dangerous Creeper",
+	"description": "Are you ready to face Creeper again",
+	"authors": [
+		"MeowWow520"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/more-dangerous-creeper/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"cn.meowwow520.mcmod.MoreDangerousCreeper"
+		],
+		"fabric-datagen": [
+			"cn.meowwow520.mcmod.MoreDangerousCreeperDataGenerator"
+		],
+		"client": [
+			"cn.meowwow520.mcmod.MoreDangerousCreeperClient"
+		]
+	},
+	"mixins": [
+		"more-dangerous-creeper.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

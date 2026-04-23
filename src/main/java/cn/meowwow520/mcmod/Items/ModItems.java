@@ -14,32 +14,41 @@ import java.util.function.Function;
 
 
 public class ModItems {
-    private ModItems() {}
+    private ModItems() {
+    }
+    // 创建物品变量
+    // TODO: 添加一个自定义创造模式物品分页
+    /**
+     * MeowWow520 是一个测试物品
+     * @implNote 注册于 待定创造物品栏
+     */
     public static final Item MeowWow520 = registerItem("meowwow520", Item::new, new Item.Settings());
-    public static final Item Jerry = registerItem("jerry", Item::new, new Item.Settings());
+    public static final Item MeowWow521 = registerItem("meowwow521", Item::new, new Item.Settings());
+
     /**
      * 注册一个物品
-     * @param name 物品的名称
-     * @param factory 或许一般默认填 Item::new
+     *
+     * @param name     物品的名称
+     * @param factory  或许一般默认填 Item::new
      * @param settings 物品的设置
      */
+    // TODO: 注释呢？
     private static Item registerItem(String name, Function<Item.Settings, Item> factory, Item.Settings settings) {
         Identifier id = Identifier.of(MoreDangerousCreeper.MOD_ID, name);
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
-        // 关键一步：把 RegistryKey 塞进 Settings
-        // NOTE: 这是我在编写 1.21.11 时，由于教程是 1.21 的版本。遇到的 BUG 之一。交由 Grok 之后获得的答案
-        settings = settings.registryKey(key);
-        Item item = factory.apply(settings);
+        Item item = factory.apply(settings.registryKey(key));
         Registry.register(Registries.ITEM, id, item);
         return item;
     }
+
+
     // 注册所有 ModItems
     public static void registerModItems() {
         MoreDangerousCreeper.LOGGER.info("[" + MoreDangerousCreeper.MOD_ID + "] Registering Items");
-        // 为 FOOD_AND_DRINK 标签页创建物品
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
+        // 将物品添加到 标签页 --> 使用 `entries.add(ItemName);`
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(entries -> {
             entries.add(MeowWow520);
-            entries.add(Jerry);
+            entries.add(MeowWow521);
         });
     }
 }

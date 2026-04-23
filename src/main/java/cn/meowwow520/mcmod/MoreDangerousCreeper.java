@@ -12,6 +12,7 @@ public class MoreDangerousCreeper implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		LOGGER.info("=======================================================");
 		LOGGER.info("Hello More Dangerous Creeper!");
 		ModItems.registerModItems();
 	}

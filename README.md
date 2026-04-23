@@ -3,7 +3,7 @@
 ---
 ### Introduction
 
-At the Beginning, I wanna ask you "Do you found original creeper is so boring, stupid and **not-at-all dangerous**?". For "FIX" this, [More Dangerous Creeper](https://meowwow520.cn/More_Dangerous_Creeper/) comes. Are you ready to face Creeper again?
+At the Beginning, I wanna ask you _"Do you found original creeper is so boring, stupid and **not-at-all dangerous**?"_. For "FIX" this, [More Dangerous Creeper](https://meowwow520.cn/More_Dangerous_Creeper/) comes. Are you ready to face Creeper again?
 
 ### Feature
 - [x] Fabric Loader
@@ -15,7 +15,7 @@ At the Beginning, I wanna ask you "Do you found original creeper is so boring, s
 
 > Find creeper and run? No! Creeper now faster than you. Seriously equipment and face them.
 
-> Go to sky and evade creeper? Not do that! Creeper and spider become a strong alliance.
+> Go to sky and evade creepers? Not do that! Creeper and spider become a strong alliance.
 
 > On Going
 

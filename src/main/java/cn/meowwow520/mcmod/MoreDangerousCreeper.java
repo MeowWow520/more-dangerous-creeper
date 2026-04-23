@@ -1,5 +1,6 @@
 package cn.meowwow520.mcmod;
 
+import cn.meowwow520.mcmod.Items.ModItemGroups;
 import cn.meowwow520.mcmod.Items.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -15,5 +16,6 @@ public class MoreDangerousCreeper implements ModInitializer {
 		LOGGER.info("=======================================================");
 		LOGGER.info("Hello More Dangerous Creeper!");
 		ModItems.registerModItems();
+		ModItemGroups.registerModItemGroups();
 	}
 }
